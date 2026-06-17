@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-dm-mono: 'DM Mono', monospace;
+  --font-inter: 'Inter', sans-serif;
+}
+
+html {
+  background-color: #0A0A0B;
+  scroll-behavior: auto;
+}
+
+body {
+  background-color: #0A0A0B;
+  color: #E8E4DC;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #C8FF00;
+  color: #0A0A0B;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0B;
+}
+::-webkit-scrollbar-thumb {
+  background: #2E2E30;
+  border-radius: 2px;
+}
+
+/* Post body markdown styles */
+.post-body h1 { @apply text-3xl font-mono font-medium text-body mb-6 mt-10 tracking-wide; }
+.post-body h2 { @apply text-2xl font-mono font-medium text-body mb-4 mt-8 tracking-wide; }
+.post-body h3 { @apply text-xl font-mono text-body mb-3 mt-6; }
+.post-body p { @apply text-body/80 mb-5 leading-relaxed; }
+.post-body ul { @apply list-disc list-inside mb-5 text-body/80 space-y-1; }
+.post-body ol { @apply list-decimal list-inside mb-5 text-body/80 space-y-1; }
+.post-body a { @apply text-accent underline underline-offset-4 hover:no-underline; }
+.post-body blockquote { @apply border-l-2 border-accent pl-4 my-6 text-muted italic; }
+.post-body code { @apply font-mono text-sm bg-surface px-1.5 py-0.5 rounded text-accent; }
+.post-body pre { @apply bg-surface rounded-lg p-4 mb-5 overflow-x-auto; }
+.post-body pre code { @apply bg-transparent p-0; }
+.post-body hr { @apply border-stroke my-8; }
