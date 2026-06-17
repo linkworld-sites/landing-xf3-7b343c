@@ -19,12 +19,24 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://c76f5cc9.run.linkworld.ai'),
   title: 'XF3 MastLOCK — Tool-Free Foil Mast Mounting',
   description:
-    'One grip. Locked. The XF3 MastLOCK eliminates tools and screws from your foil setup — faster, repeatable, universal.',
+    'XF3 MastLOCK eliminates tools, screws, and setup frustration — one-grip quick-release for all foil brands. Faster, repeatable, universal.',
   openGraph: {
+    type: 'website',
+    url: 'https://c76f5cc9.run.linkworld.ai',
     title: 'XF3 MastLOCK — Tool-Free Foil Mast Mounting',
-    description: 'One grip. Locked. Engineered for serious foil riders.',
+    description:
+      'One grip. Locked. XF3 MastLOCK replaces screws and tools with a quick-release system engineered for serious foil riders.',
+    siteName: 'XF3',
+    images: [{ url: '/images/hero.png', width: 1200, height: 630, alt: 'XF3 MastLOCK quick-release foil mounting system' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'XF3 MastLOCK — Tool-Free Foil Mast Mounting',
+    description:
+      'One grip. Locked. XF3 MastLOCK replaces screws and tools with a quick-release system engineered for serious foil riders.',
     images: ['/images/hero.png'],
   },
 }
