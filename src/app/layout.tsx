@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { DM_Mono, Inter } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import SmoothScroll from '@/components/SmoothScroll'
 import FunnelTracker from '@/components/FunnelTracker'
@@ -45,6 +46,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="de" className={`${dmMono.variable} ${inter.variable}`}>
       <body className="bg-base text-body font-sans antialiased">
+        <Script
+          src="https://app.linkworld.ai/api/public/funnel/7b343c2f-0bb7-4e2b-920c-d406c3073cad/pixel.js"
+          strategy="afterInteractive"
+        />
         <SmoothScroll>
           <FunnelTracker />
           {children}
