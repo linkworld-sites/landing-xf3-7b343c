@@ -85,14 +85,14 @@ export default function BaseplateShimming() {
                       width="18"
                       height="3"
                       rx="1"
-                      fill="#C6037F"
+                      fill="#C8FF00"
                       opacity={0.8 - i * 0.15}
                     />
                   ))}
 
                   {/* Cam lever */}
                   <rect x="22" y="-30" width="24" height="14" rx="2" fill="#1C1C1E" stroke="#2E2E30" strokeWidth="1" />
-                  <circle cx="46" cy="-23" r="5" fill="none" stroke="#C6037F" strokeWidth="1.5" />
+                  <circle cx="46" cy="-23" r="5" fill="none" stroke="#C8FF00" strokeWidth="1.5" />
 
                   {/* Angle arc */}
                   <path
@@ -110,7 +110,7 @@ export default function BaseplateShimming() {
                 <text
                   x="162"
                   y="80"
-                  fill={trimDeg !== 0 ? '#C6037F' : '#6B6B6B'}
+                  fill={trimDeg !== 0 ? '#C8FF00' : '#6B6B6B'}
                   fontFamily="var(--font-dm-mono)"
                   fontSize="12"
                   letterSpacing="1"
@@ -138,7 +138,7 @@ export default function BaseplateShimming() {
                 onChange={(e) => setAngle(Number(e.target.value))}
                 className="w-full h-1 appearance-none cursor-pointer"
                 style={{
-                  background: `linear-gradient(to right, #C6037F ${((angle) / 6) * 100}%, #2E2E30 ${((angle) / 6) * 100}%)`,
+                  background: `linear-gradient(to right, #C8FF00 ${((angle) / 6) * 100}%, #2E2E30 ${((angle) / 6) * 100}%)`,
                   borderRadius: '2px',
                   outline: 'none',
                 }}
