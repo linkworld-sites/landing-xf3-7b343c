@@ -31,7 +31,7 @@ const parts: Part[] = [
     desc: 'Ultra-slim 0.5mm shims for precise trim angle adjustment.',
     x: 0, y: 54, initX: 150, initY: 220,
     shape: 'M-38,-3 L38,-3 L38,3 L-38,3 Z',
-    fill: '#1C1C1E', stroke: '#C8FF00',
+    fill: '#1C1C1E', stroke: '#C6037F',
   },
   {
     id: 'body',
@@ -55,7 +55,7 @@ const parts: Part[] = [
     desc: 'Grade 8 titanium. Field-replaceable in 30 seconds.',
     x: -4, y: -8, initX: -180, initY: -100,
     shape: 'M-4,-26 L4,-26 L4,26 L-4,26 Z',
-    fill: '#C8FF00', stroke: '#C8FF00',
+    fill: '#C6037F', stroke: '#C6037F',
   },
   {
     id: 'collar',
