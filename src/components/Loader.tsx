@@ -68,7 +68,7 @@ export default function Loader({ onComplete }: LoaderProps) {
               {/* Keyhole */}
               <motion.circle
                 cx="40" cy="63" r="6"
-                fill="#C8FF00"
+                fill="#C6037F"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={phase === 'wordmark' ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
                 transition={{ duration: 0.3, type: 'spring', stiffness: 400 }}
