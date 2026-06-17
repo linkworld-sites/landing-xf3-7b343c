@@ -57,7 +57,7 @@ export default function Hero() {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
         >
           <Image
-            src="/images/hero.png"
+            src="/images/products/product-0.jpg"
             alt="XF3 MastLOCK precision foil mast mounting system"
             width={640}
             height={640}

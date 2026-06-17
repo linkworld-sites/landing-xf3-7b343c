@@ -76,7 +76,7 @@ export default function BuyModule() {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
           <Image
-            src="/images/hero.png"
+            src="/images/products/product-0.jpg"
             alt="XF3 MastLOCK"
             width={480}
             height={480}
