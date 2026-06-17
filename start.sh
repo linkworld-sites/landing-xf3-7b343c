@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
+set -e
 cd "$(dirname "$0")"
-exec python3 -m http.server 8080
+npm install
+npm run build
+exec npm start
