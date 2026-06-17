@@ -10,7 +10,7 @@ const principles = [
     title: 'TOOL-FREE',
     sub: 'No hex keys. No screwdrivers. No searching the beach bag.',
     detail: 'Quarter-turn cam lever. Any rider, any glove, any conditions.',
-    image: '/images/detail.png',
+    image: '/images/products/product-0.jpg',
     offset: '-60px',
   },
   {
@@ -18,7 +18,7 @@ const principles = [
     title: 'REPEATABLE',
     sub: 'Same position. Every session. Every board.',
     detail: 'Precision-machined datum surfaces ensure sub-millimeter repeatability every mount.',
-    image: '/images/process.png',
+    image: '/images/products/product-1.jpg',
     offset: '60px',
   },
   {
@@ -26,7 +26,7 @@ const principles = [
     title: 'UNIVERSAL',
     sub: 'One system. All brands. All mast bases.',
     detail: 'Compatible with every ISO-spec mast track. Swap boards in seconds, not minutes.',
-    image: '/images/material.png',
+    image: '/images/products/product-2.jpg',
     offset: '-40px',
   },
 ]
