@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { checkout, formatPrice } from '@/lib/checkout'
@@ -15,15 +15,11 @@ export default function CheckoutPage() {
   const [error, setError] = useState<string | null>(null)
   const currency = items[0]?.product.currency || 'EUR'
 
-  useEffect(() => {
-    track('checkout')
-  }, [])
-
   const handlePay = async () => {
     if (!items.length) return
     setLoading(true)
     setError(null)
-    track('purchase')
+    track('convert')
     const cartItems = items.map((i) => ({ product_id: i.product.id, quantity: i.quantity }))
     const ok = await checkout(cartItems)
     if (!ok) {
