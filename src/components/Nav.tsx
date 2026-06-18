@@ -3,16 +3,18 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useCart } from '@/context/CartContext'
 
 const links = [
   { href: '#mechanism', label: 'Mechanism' },
   { href: '#specs', label: 'Specs' },
-  { href: '#buy', label: 'Buy' },
+  { href: '/shop', label: 'Shop' },
   { href: '/blog', label: 'Blog' },
 ]
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
+  const { totalItems } = useCart()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60)
@@ -44,15 +46,21 @@ export default function Nav() {
         ))}
       </div>
 
-      <motion.a
-        href="#buy"
-        className="font-mono text-xs uppercase tracking-widest px-5 py-2 border border-accent text-accent hover:bg-accent hover:text-base transition-colors"
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        transition={{ duration: 0.15 }}
-      >
-        €319
-      </motion.a>
+      <Link href="/cart">
+        <motion.div
+          className="font-mono text-xs uppercase tracking-widest px-5 py-2 border border-accent text-accent hover:bg-accent hover:text-base transition-colors relative"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ duration: 0.15 }}
+        >
+          Cart
+          {totalItems > 0 && (
+            <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-accent text-base font-mono text-[10px] flex items-center justify-center">
+              {totalItems}
+            </span>
+          )}
+        </motion.div>
+      </Link>
     </motion.nav>
   )
 }

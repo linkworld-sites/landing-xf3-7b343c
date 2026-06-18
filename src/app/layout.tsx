@@ -5,6 +5,7 @@ import './globals.css'
 import SmoothScroll from '@/components/SmoothScroll'
 import FunnelTracker from '@/components/FunnelTracker'
 import CookieConsent from '@/components/CookieConsent'
+import { CartProvider } from '@/context/CartContext'
 
 const dmMono = DM_Mono({
   subsets: ['latin'],
@@ -50,11 +51,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://app.linkworld.ai/api/public/funnel/7b343c2f-0bb7-4e2b-920c-d406c3073cad/pixel.js"
           strategy="afterInteractive"
         />
-        <SmoothScroll>
-          <FunnelTracker />
-          {children}
-          <CookieConsent />
-        </SmoothScroll>
+        <CartProvider>
+          <SmoothScroll>
+            <FunnelTracker />
+            {children}
+            <CookieConsent />
+          </SmoothScroll>
+        </CartProvider>
       </body>
     </html>
   )
