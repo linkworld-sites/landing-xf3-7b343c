@@ -17,7 +17,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
   const handleAdd = () => {
     if (outOfStock) return
     addItem(product)
-    track('add_to_cart')
+    track('intent')
   }
 
   return (
