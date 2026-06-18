@@ -11,12 +11,13 @@ export default function CookieConsent() {
   }, [])
 
   const accept = () => {
-    localStorage.setItem('lw_consent', 'all')
+    localStorage.setItem('lw_consent', JSON.stringify({ analytics: true, marketing: true }))
+    window.dispatchEvent(new Event('lw-consent-changed'))
     setVisible(false)
   }
 
   const decline = () => {
-    localStorage.setItem('lw_consent', 'minimal')
+    localStorage.setItem('lw_consent', JSON.stringify({ analytics: false, marketing: false }))
     setVisible(false)
   }
 
